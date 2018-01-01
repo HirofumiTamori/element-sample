@@ -14,6 +14,7 @@
     <div class="block">
       <div id="slider">
         <el-slider v-model="value1" :show-tooltip="true"></el-slider>
+        <span id="slider-value">{{value1}}</span>
       </div>
     </div>
     <div class="block">
@@ -91,6 +92,9 @@
     border-bottom: 1px solid #eff3f6;
     color: #445566;
   }
+  span#slider-value {
+    font-size: 20pt;
+  }
   span#switches {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative; 
@@ -99,6 +103,3 @@
     font-size: 24pt;
   }
 </style>
-
-
-
