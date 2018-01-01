@@ -1,6 +1,6 @@
 # element-sample
 
-A Sample app for Element works on Electron
+A Sample app for Element-UI works on Electron
 
 #### Build Setup
 
