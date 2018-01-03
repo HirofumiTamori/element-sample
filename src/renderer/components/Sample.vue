@@ -27,10 +27,10 @@
     </div>
     <div class="block">
       <div id="switches">
-        <el-switch v-model="sw1" active-value=8 inactive-value=0 @change="swchange"></el-switch>
-        <el-switch v-model="sw2" active-value=4 inactive-value=0 @change="swchange"></el-switch>
-        <el-switch v-model="sw3" active-value=2 inactive-value=0 @change="swchange"></el-switch>
-        <el-switch v-model="sw4" active-value=1 inactive-value=0 @change="swchange"></el-switch>
+        <el-switch v-model="sw1" active-value=8 inactive-value=0></el-switch>
+        <el-switch v-model="sw2" active-value=4 inactive-value=0></el-switch>
+        <el-switch v-model="sw3" active-value=2 inactive-value=0></el-switch>
+        <el-switch v-model="sw4" active-value=1 inactive-value=0></el-switch>
         <span id="switches">{{swvalue}}</span>
       </div>
     </div>
@@ -47,8 +47,7 @@
         sw1: 0,
         sw2: 0,
         sw3: 0,
-        sw4: 0,
-        swvalue: 0
+        sw4: 0
       }
     },
     methods: {
@@ -76,9 +75,11 @@
         this.$message.error({
           message: 'エラーです'
         })
-      },
-      swchange () {
-        this.swvalue = Number(this.sw1) + Number(this.sw2) + Number(this.sw3) + Number(this.sw4)
+      }
+    },
+    computed: {
+      swvalue: function () {
+        return Number(this.sw1) + Number(this.sw2) + Number(this.sw3) + Number(this.sw4)
       }
     }
   }
